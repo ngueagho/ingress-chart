@@ -1,0 +1,17 @@
+replicas: 3
+targetPort: 80
+labelvalue:  prod
+appName: helm-application
+containerName: helm-container
+containerImage: yeasy/simple-web:latest
+
+
+cluster-type: ClusterIP
+protocol: TCP
+serviceName: helm-service
+port: 80
+
+ingressName: helm-ingress
+host: helm.simpleachat.com
+secretName: tls-secret
+pathType: Prefix
